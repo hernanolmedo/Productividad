@@ -1,0 +1,20 @@
+﻿<mah:MetroWindow x:Class="Productividad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Window.Deactivated="Window_Deactivated"
+        Title="MainWindow" Height="82.328" Width="168.503">
+    <Grid Margin="0,0,14,3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="134*"/>
+        </Grid.ColumnDefinitions>
+        <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="11" VerticalAlignment="Top" Width="118" Margin="11.16,4,0,0" Grid.Column="1"/>
+        <Button x:Name="button" Content="Empezar" HorizontalAlignment="Left" Height="26" Margin="71.16,20,0,0" VerticalAlignment="Top" Width="58" Click="Button_Click" RenderTransformOrigin="0.171,0.592" Grid.Column="1"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="11.16,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" Grid.Column="1"/>
+
+    </Grid>
+</mah:MetroWindow>

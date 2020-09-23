@@ -20,7 +20,7 @@ namespace Productividad
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : MetroWindow
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
@@ -32,6 +32,11 @@ namespace Productividad
             var window = (Window)sender;
             window.Topmost = true;
         }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             var tiempo = int.Parse(textBox.Text.ToString());
@@ -41,7 +46,7 @@ namespace Productividad
                 for (int i = 0; i < 100; i++)
                 {
                     ((IProgress<int>)progress).Report(i);
-                    Thread.Sleep(tiempo*600);
+                    Thread.Sleep(tiempo * 600);
                 }
             });
         }

@@ -5,21 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Productividad"
         mc:Ignorable="d"
-        Title="MainWindow" Height="54.319" Width="139.889"
+        Title="MainWindow" Height="14.208" Width="144.749"
         WindowStyle="None"
         Deactivated="Window_Deactivated"
         AllowsTransparency="True"
         MouseDown="Window_MouseDown"
         SizeToContent="WidthAndHeight">
-    <Grid RenderTransformOrigin="0.462,0.682" Margin="0,0,5,4">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="133*"/>
-            <ColumnDefinition Width="2*"/>
-        </Grid.ColumnDefinitions>
-        <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="11" VerticalAlignment="Top" Width="118" Margin="10,4,0,0" Grid.Column="1"/>
-        <Button x:Name="button" Content="Empezar" HorizontalAlignment="Left" Height="26" Margin="70,20,0,0" VerticalAlignment="Top" Width="58" Click="Button_Click" RenderTransformOrigin="0.171,0.592" Grid.Column="1"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41" Grid.Column="1"/>
+    <Grid Margin="0,0,-0.333,0" Height="14" VerticalAlignment="Top" HorizontalAlignment="Left" Width="145">
+        <ProgressBar x:Name="progressBar" HorizontalAlignment="Right" MinHeight="5" Height="14" VerticalAlignment="Bottom" Width="129"/>
+        <TextBox x:Name="textBox" Text="60" Padding="-2" KeyDown="OnKeyDownHandler" MinHeight="5" TextWrapping="Wrap" FontSize="12" RenderTransformOrigin="0.495,0.027" Margin="0,0,129,0" HorizontalAlignment="Right" Width="16" Height="14" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Window>

@@ -39,18 +39,21 @@ namespace Productividad
                 this.DragMove();
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private async void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
-            var tiempo = int.Parse(textBox.Text.ToString());
-            var progress = new Progress<int>(value => progressBar.Value = value);
-            await Task.Run(() =>
+            if (e.Key == Key.Return)
             {
-                for (int i = 0; i < 100; i++)
+                var tiempo = int.Parse(textBox.Text.ToString());
+                var progress = new Progress<int>(value => progressBar.Value = value);
+                await Task.Run(() =>
                 {
-                    ((IProgress<int>)progress).Report(i);
-                    Thread.Sleep(tiempo * 600);
-                }
-            });
+                    for (int i = 0; i < 100; i++)
+                    {
+                        ((IProgress<int>)progress).Report(i);
+                        Thread.Sleep(tiempo * 600);
+                    }
+                });
+            }
         }
     }
 }
